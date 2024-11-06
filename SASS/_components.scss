@@ -1,0 +1,106 @@
+// components.scss
+
+h1 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    text-align: center;
+    color: $text-dark;
+  
+    body.light-mode & {
+      color: $text-light;
+    }
+  }
+  
+  #todo-form {
+    display: flex;
+    margin-bottom: 20px;
+  
+    button {
+      padding: 10px 20px;
+      border: none;
+      background-color: $primary-color;
+      color: $text-dark;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+  
+      &:hover {
+        background-color: $primary-dark;
+      }
+    }
+  }
+  
+  #todo-input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid $input-border-light;
+    border-radius: 5px;
+    margin-right: 10px;
+  
+    body.light-mode & {
+      border: 1px solid $input-border-dark;
+    }
+  }
+  
+  #todo-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .todo-item {
+    background-color: $item-bg-dark;
+    padding: 10px;
+    border: 1px solid $item-border-dark;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+    body.light-mode & {
+      background-color: $item-bg-light;
+      border: 1px solid $item-border-light;
+    }
+  
+    &.completed {
+      text-decoration: line-through;
+      color: $completed-text;
+    }
+  
+    button {
+      background-color: $error-color;
+      color: $text-dark;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+  
+      &:hover {
+        background-color: $error-dark;
+      }
+    }
+  }
+  
+  .dark-mode-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: $primary-color;
+    color: $text-dark;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+  
+    &:hover {
+      background-color: $primary-dark;
+    }
+  }
